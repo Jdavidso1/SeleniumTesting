@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class Login {
 
 	public static void main(String[] args) {
-		// 1. Define the web driver
+		// 1. Define the web driver (chrome)
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\JDAVI\\OneDrive\\Documents\\BACKUPS\\ACADEMYPGH\\PROJECTS\\Testing\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		
