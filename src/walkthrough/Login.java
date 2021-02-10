@@ -26,7 +26,13 @@ public class Login {
 		driver.findElement(By.name("wploginattempt")).click();
 		
 		// 6. Get confirmation
+		String message = driver.findElement(By.id("pt-logout")).getText();
+		System.out.println("CONFIRMATION: " + message + " is present.");
 		
+		String pageTitle = driver.getTitle();
+		System.out.println("PAGE TITLE: " + pageTitle);
+
 		// 7. Close the browser
+		driver.close();
 	}
 }
