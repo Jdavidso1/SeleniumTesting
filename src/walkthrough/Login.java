@@ -1,5 +1,6 @@
 package walkthrough;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -13,10 +14,19 @@ public class Login {
 		// 2. Open web browser and navigate to page (https://wiki.workhardpgh.com/wiki/Special:UserLogin)
 		driver.get("https://wiki.workhardpgh.com/wiki/Special:UserLogin");
 		
-		// 3. Enter email address
+		//Find elements: locate the element, determine the action, pass any parameters
+		
+		// 3. Enter email address	
+		driver.findElement(By.name("wpName")).sendKeys("thisisatest");
+		
 		// 4. Enter Password
+		driver.findElement(By.name("wpPassword")).sendKeys("EXPERIMENT1");
+		
 		// 5. Click Login
+		driver.findElement(By.name("wploginattempt")).click();
+		
 		// 6. Get confirmation
+		
 		// 7. Close the browser
 	}
 }
