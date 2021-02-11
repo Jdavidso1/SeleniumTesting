@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class NewAccount {
 
 	public static void main(String[] args) {
-		String email = "test6@email.com";
+		String email = "test7@email.com";
 		String gender = "male";
 		String firstName = "John";
 		String lastName = "Smith";
@@ -59,6 +59,12 @@ public class NewAccount {
 		fnameElement.sendKeys(firstName);
 		lnameElement.sendKeys(lastName);
 		passwordElement.sendKeys(password);
+		addressElement.sendKeys(address);
+		cityElement.sendKeys(city);
+		postcodeElement.sendKeys(zipcode);
+		phoneElement.sendKeys(phone);
+		
+		new Select(stateElement).selectByVisibleText(state);
 		
 		if (newsletter) {
 			if (newsletterElement.isSelected()) { }
@@ -78,19 +84,15 @@ public class NewAccount {
 			else { optinElement.click(); }
 		}
 		
-		addressElement.sendKeys(address);
-		cityElement.sendKeys(city);
-		new Select(stateElement).selectByVisibleText(state);
-		postcodeElement.sendKeys(zipcode);
-		phoneElement.sendKeys(phone);
-		
 		// 4. Click submit
 		driver.findElement(By.name("submitAccount")).click();
 		
 		// 5. Get confirmation
 		String confirm = driver.findElement(By.className("info-account")).getText();
-		System.out.println("CONFIRMATION: " + confirm);
-		
+		String expected = ("Welcome to your account. Here you can manage all of your personal information and orders.");
+		if (confirm.contains(expected)) { System.out.println("CONFIRMATION: " + confirm); }
+		else { System.out.println("TEST FAILED"); }
+				
 		// 6. Close the browser
 		driver.close();
 	}
