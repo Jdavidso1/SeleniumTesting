@@ -28,7 +28,7 @@ public class ATagsTest {
 		for (WebElement aElement : aElements) {
 			System.out.println(aElement.getText());
 			
-			if (aElement.getText().equals("CREATE ACCOUNT")) {
+			if (aElement.getText().equals("Sign in")) {
 				createAccountPresent = true;
 				break;
 			}
