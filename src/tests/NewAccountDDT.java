@@ -90,7 +90,12 @@ public class NewAccountDDT {
 		// gender button algorithm
 		if (gender.equalsIgnoreCase("male")) { maleElement.click(); }
 		else { femaleElement.click(); }		
-		
+		//checkbox algorithms
+		if (newsletter) { if (!newsletterElement.isSelected()) { newsletterElement.click(); } }
+		else { if (newsletterElement.isSelected()) { newsletterElement.click(); } }
+		if (optin) { if (!optinElement.isSelected()) { optinElement.click(); } }
+		else { if (optinElement.isSelected()) { optinElement.click(); } }
+		//other webelements
 		fnameElement.sendKeys(firstName);
 		lnameElement.sendKeys(lastName);
 		passwordElement.sendKeys(password);
@@ -98,23 +103,10 @@ public class NewAccountDDT {
 		cityElement.sendKeys(city);
 		postcodeElement.sendKeys(zipcode);
 		phoneElement.sendKeys(phone);
-		
 		new Select(stateElement).selectByVisibleText(state);
 		
-		//checkbox algorithms
-		if (newsletter) { if (!newsletterElement.isSelected()) { newsletterElement.click(); } }
-		else { if (newsletterElement.isSelected()) { newsletterElement.click(); } }
-		if (optin) { if (!optinElement.isSelected()) { optinElement.click(); } }
-		else { if (optinElement.isSelected()) { optinElement.click(); } }
-		
 		// Click Submit
-		//driver.findElement(By.name("submitAccount")).click();
-		
-		// Get confirmation
-		//String confirm = driver.findElement(By.className("info-account")).getText();
-		//String expected = ("Welcome to your account. Here you can manage all of your personal information and orders.");
-		//if (confirm.contains(expected)) { System.out.println("CONFIRMATION: " + confirm); }
-		//else { System.out.println("TEST FAILED"); }			
+		driver.findElement(By.name("submitAccount")).click();		
 	}
 	
 	@After
