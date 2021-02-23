@@ -1,2 +1,0 @@
-test10@testmail.com,male,John,Smith,Experiment1,123 Main St,Cityplace,12345,Wyoming,1231231234,false,true
-test11@testmail.com,female,Jane,Smoff,Experiment2,345 Side Ave,Springfield,98765,Illinois,2342342345,true,false
