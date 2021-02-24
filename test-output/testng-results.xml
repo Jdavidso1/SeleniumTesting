@@ -1,26 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
+<testng-results ignored="0" total="4" passed="2" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-02-23T19:25:19 EST" name="Default suite" finished-at="2021-02-23T19:25:19 EST" duration-ms="94">
+  <suite started-at="2021-02-23T20:02:52 EST" name="Default suite" finished-at="2021-02-23T20:03:24 EST" duration-ms="32550">
     <groups>
     </groups>
-    <test started-at="2021-02-23T19:25:19 EST" name="Default test" finished-at="2021-02-23T19:25:19 EST" duration-ms="94">
+    <test started-at="2021-02-23T20:02:52 EST" name="Default test" finished-at="2021-02-23T20:03:24 EST" duration-ms="32550">
       <class name="tests.LoginDDT">
-        <test-method signature="loginTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.LoginDDT@68267da0]" started-at="2021-02-23T19:25:19 EST" name="loginTest" data-provider="getData" finished-at="2021-02-23T19:25:19 EST" duration-ms="0" status="SKIP">
-          <exception class="java.lang.RuntimeException">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginDDT@394a2528]" started-at="2021-02-23T20:02:52 EST" name="setUp" finished-at="2021-02-23T20:02:59 EST" duration-ms="7160" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="loginTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.LoginDDT@394a2528]" started-at="2021-02-23T20:02:59 EST" name="loginTest" data-provider="getData" finished-at="2021-02-23T20:03:01 EST" duration-ms="1594" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Ellie Prynne]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ep@testemail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ep1password]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginDDT@394a2528]" started-at="2021-02-23T20:03:01 EST" name="tearDown" finished-at="2021-02-23T20:03:02 EST" duration-ms="744" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginDDT@394a2528]" started-at="2021-02-23T20:03:02 EST" name="setUp" finished-at="2021-02-23T20:03:06 EST" duration-ms="4320" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="loginTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.LoginDDT@394a2528]" started-at="2021-02-23T20:03:06 EST" name="loginTest" data-provider="getData" finished-at="2021-02-23T20:03:06 EST" duration-ms="46" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Shawn Thompson]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sw@testemail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[sw2password]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchWindowException">
             <message>
-              <![CDATA[java.lang.NoClassDefFoundError: org/apache/commons/math3/util/ArithmeticUtils]]>
+              <![CDATA[no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=88.0.4324.182)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-0Q2HLJC', ip: '10.0.0.28', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.182, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\JDAVI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63113}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1a31bdef06b826d2b010398d2828929f
+*** Element info: {Using=name, value=email}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: java.lang.NoClassDefFoundError: org/apache/commons/math3/util/ArithmeticUtils
-at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:49)
-at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:145)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:797)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:740)
-at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
-at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:789)
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=88.0.4324.182)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-0Q2HLJC', ip: '10.0.0.28', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.182, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\JDAVI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63113}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1a31bdef06b826d2b010398d2828929f
+*** Element info: {Using=name, value=email}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:404)
+at org.openqa.selenium.By$ByName.findElement(By.java:284)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at tests.LoginDDT.loginTest(LoginDDT.java:29)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
 at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
@@ -40,36 +124,143 @@ at org.testng.TestNG.run(TestNG.java:1037)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.NoClassDefFoundError: org/apache/commons/math3/util/ArithmeticUtils
-at org.apache.poi.poifs.property.RootProperty.setSize(RootProperty.java:59)
-at org.apache.poi.poifs.property.DirectoryProperty.<init>(DirectoryProperty.java:52)
-at org.apache.poi.poifs.property.RootProperty.<init>(RootProperty.java:31)
-at org.apache.poi.poifs.property.PropertyTable.<init>(PropertyTable.java:58)
-at org.apache.poi.poifs.filesystem.POIFSFileSystem.<init>(POIFSFileSystem.java:99)
-at org.apache.poi.poifs.filesystem.POIFSFileSystem.<init>(POIFSFileSystem.java:272)
-at org.apache.poi.hssf.usermodel.HSSFWorkbook.<init>(HSSFWorkbook.java:399)
-at org.apache.poi.hssf.usermodel.HSSFWorkbook.<init>(HSSFWorkbook.java:381)
-at utilities.Excel.get(Excel.java:21)
-at tests.LoginDDT.getData(LoginDDT.java:16)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginDDT@394a2528]" started-at="2021-02-23T20:03:06 EST" name="tearDown" finished-at="2021-02-23T20:03:07 EST" duration-ms="665" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginDDT@394a2528]" started-at="2021-02-23T20:03:07 EST" name="setUp" finished-at="2021-02-23T20:03:11 EST" duration-ms="4283" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="loginTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.LoginDDT@394a2528]" started-at="2021-02-23T20:03:11 EST" name="loginTest" data-provider="getData" finished-at="2021-02-23T20:03:12 EST" duration-ms="1236" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Michael Lane]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ml@testemail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ml3password]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":".info\-account"}
+  (Session info: chrome=88.0.4324.182)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-0Q2HLJC', ip: '10.0.0.28', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.182, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\JDAVI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63135}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 251eea3eaee6d85292efee53423bde3a
+*** Element info: {Using=class name, value=info-account}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".info\-account"}
+  (Session info: chrome=88.0.4324.182)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-0Q2HLJC', ip: '10.0.0.28', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.182, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\JDAVI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63135}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 251eea3eaee6d85292efee53423bde3a
+*** Element info: {Using=class name, value=info-account}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByClassName(RemoteWebDriver.java:412)
+at org.openqa.selenium.By$ByClassName.findElement(By.java:389)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at tests.LoginDDT.loginTest(LoginDDT.java:33)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.base/java.lang.reflect.Method.invoke(Method.java:564)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:76)
-at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
-... 25 more
-Caused by: java.lang.ClassNotFoundException: org.apache.commons.math3.util.ArithmeticUtils
-at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:606)
-at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:168)
-at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
-... 42 more
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginDDT@394a2528]" started-at="2021-02-23T20:03:12 EST" name="tearDown" finished-at="2021-02-23T20:03:13 EST" duration-ms="722" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginDDT@394a2528]" started-at="2021-02-23T20:03:13 EST" name="setUp" finished-at="2021-02-23T20:03:19 EST" duration-ms="5945" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="loginTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.LoginDDT@394a2528]" started-at="2021-02-23T20:03:19 EST" name="loginTest" data-provider="getData" finished-at="2021-02-23T20:03:24 EST" duration-ms="4834" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Janelle Von]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[jv@testemail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[jv4password]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginDDT@394a2528]" started-at="2021-02-23T20:03:24 EST" name="tearDown" finished-at="2021-02-23T20:03:24 EST" duration-ms="723" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- tests.LoginDDT -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

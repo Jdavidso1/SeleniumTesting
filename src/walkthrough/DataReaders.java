@@ -20,7 +20,7 @@ public class DataReaders {
 	}
 	
 	public static void readXLS() {
-		String[][] data = utilities.Excel.get("C:\\Users\\JDAVI\\OneDrive\\Documents\\BACKUPS\\ACADEMYPGH\\PROJECTS\\Java\\SeleniumTesting\\UserLogins.xls");
+		String[][] data = utilities.Excel.get("C:\\Users\\JDAVI\\OneDrive\\Documents\\BACKUPS\\ACADEMYPGH\\PROJECTS\\Java\\SeleniumTesting\\UserLogin.xls");
 		
 		for (String[] record : data) {
 			System.out.println("\nNEW RECORD:");

@@ -13,7 +13,7 @@ public class LoginDDT {
 	
 	@DataProvider
 	public String[][] getData() {
-		String filename = "C:\\Users\\JDAVI\\OneDrive\\Documents\\BACKUPS\\ACADEMYPGH\\PROJECTS\\Java\\SeleniumTesting\\UserLogins.xls";
+		String filename = "C:\\Users\\JDAVI\\OneDrive\\Documents\\BACKUPS\\ACADEMYPGH\\PROJECTS\\Java\\SeleniumTesting\\UserLogin.xls";
 		return utilities.Excel.get(filename);
 	}
 	
