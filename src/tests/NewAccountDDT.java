@@ -112,7 +112,7 @@ public class NewAccountDDT {
 	@After
 	public void tearDown() {
 		// Close the browser
-		//driver.close();
+		driver.close();
 	}
 		
 }

@@ -1,39 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-02-23T15:53:34 EST" name="Selenium Cucumber Test Suites" finished-at="2021-02-23T15:53:51 EST" duration-ms="17061">
+  <suite started-at="2021-02-23T19:25:19 EST" name="Default suite" finished-at="2021-02-23T19:25:19 EST" duration-ms="94">
     <groups>
     </groups>
-    <test started-at="2021-02-23T15:53:34 EST" name="Home Page Tests" finished-at="2021-02-23T15:53:51 EST" duration-ms="17061">
-      <class name="smoketests.ATagsTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:smoketests.ATagsTest@31f9b85e]" started-at="2021-02-23T15:53:34 EST" name="setup" finished-at="2021-02-23T15:53:41 EST" duration-ms="7310" status="PASS">
+    <test started-at="2021-02-23T19:25:19 EST" name="Default test" finished-at="2021-02-23T19:25:19 EST" duration-ms="94">
+      <class name="tests.LoginDDT">
+        <test-method signature="loginTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.LoginDDT@68267da0]" started-at="2021-02-23T19:25:19 EST" name="loginTest" data-provider="getData" finished-at="2021-02-23T19:25:19 EST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[java.lang.NoClassDefFoundError: org/apache/commons/math3/util/ArithmeticUtils]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: java.lang.NoClassDefFoundError: org/apache/commons/math3/util/ArithmeticUtils
+at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:49)
+at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:145)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:797)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:740)
+at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
+at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:789)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.NoClassDefFoundError: org/apache/commons/math3/util/ArithmeticUtils
+at org.apache.poi.poifs.property.RootProperty.setSize(RootProperty.java:59)
+at org.apache.poi.poifs.property.DirectoryProperty.<init>(DirectoryProperty.java:52)
+at org.apache.poi.poifs.property.RootProperty.<init>(RootProperty.java:31)
+at org.apache.poi.poifs.property.PropertyTable.<init>(PropertyTable.java:58)
+at org.apache.poi.poifs.filesystem.POIFSFileSystem.<init>(POIFSFileSystem.java:99)
+at org.apache.poi.poifs.filesystem.POIFSFileSystem.<init>(POIFSFileSystem.java:272)
+at org.apache.poi.hssf.usermodel.HSSFWorkbook.<init>(HSSFWorkbook.java:399)
+at org.apache.poi.hssf.usermodel.HSSFWorkbook.<init>(HSSFWorkbook.java:381)
+at utilities.Excel.get(Excel.java:21)
+at tests.LoginDDT.getData(LoginDDT.java:16)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:76)
+at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
+... 25 more
+Caused by: java.lang.ClassNotFoundException: org.apache.commons.math3.util.ArithmeticUtils
+at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:606)
+at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:168)
+at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+... 42 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="loginElementsPresentTest()[pri:0, instance:smoketests.ATagsTest@31f9b85e]" started-at="2021-02-23T15:53:41 EST" name="loginElementsPresentTest" finished-at="2021-02-23T15:53:41 EST" duration-ms="139" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginElementsPresentTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:smoketests.ATagsTest@31f9b85e]" started-at="2021-02-23T15:53:41 EST" name="teardown" finished-at="2021-02-23T15:53:43 EST" duration-ms="1222" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- smoketests.ATagsTest -->
-      <class name="smoketests.LoginPresentTestNG">
-        <test-method is-config="true" signature="setup()[pri:0, instance:smoketests.LoginPresentTestNG@424e1977]" started-at="2021-02-23T15:53:43 EST" name="setup" finished-at="2021-02-23T15:53:50 EST" duration-ms="6933" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="loginElementsPresentTest()[pri:0, instance:smoketests.LoginPresentTestNG@424e1977]" started-at="2021-02-23T15:53:50 EST" name="loginElementsPresentTest" finished-at="2021-02-23T15:53:50 EST" duration-ms="145" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginElementsPresentTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:smoketests.LoginPresentTestNG@424e1977]" started-at="2021-02-23T15:53:50 EST" name="teardown" finished-at="2021-02-23T15:53:51 EST" duration-ms="1257" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- smoketests.LoginPresentTestNG -->
-    </test> <!-- Home Page Tests -->
-  </suite> <!-- Selenium Cucumber Test Suites -->
+        </test-method> <!-- loginTest -->
+      </class> <!-- tests.LoginDDT -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
